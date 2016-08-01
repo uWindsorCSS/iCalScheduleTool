@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Quinn Perfetto//uWindsor iCal Generator// EN
+{% for event in events %}
+BEGIN:VEVENT
+SUMMARY:{{event.title}}
+LOCATION:{{event.location}}
+RRULE:FREQ=WEEKLY;BYDAY=MO;COUNT={{event.count}}
+DTSTART:{{event.start_time}}
+DTEND:{{event.end_time}}
+UID:quinnperfetto-{{event.title}}-{{event.start_time}}-{{event.end_time}}
+DTSTAMP:{{event.stamp}}
+END:VEVENT
+{% endfor %}
+END:VCALENDAR

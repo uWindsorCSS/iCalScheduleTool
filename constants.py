@@ -1,0 +1,2 @@
+USERNAME_INPUT_NAME = "_58_login"
+PASSWORD_INPUT_NAME = "_58_password"

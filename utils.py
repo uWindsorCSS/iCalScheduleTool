@@ -83,8 +83,8 @@ def ClassToWeeklyEvent(class_object, course_name, location):
             start_datetime.weekday()).replace(hour = start_datetime.hour,
             minute = start_datetime.minute)
 
-    first_event_end = first_event_start.replace(hour = start_datetime.hour,
-            minute = start_datetime.minute)
+    first_event_end = first_event_start.replace(hour = end_datetime.hour,
+            minute = end_datetime.minute)
 
     # 1 count for testing, should change to 14ish for a semester.
     return WeeklyEvent(course_name, first_event_start, first_event_end, location, 1)
